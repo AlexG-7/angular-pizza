@@ -1,0 +1,10 @@
+<h1>{{title}}</h1>
+<h2>{{pizza.nom}}</h2>
+
+<div> ID : {{ pizza.id }} </div>
+<div> Prix : {{ pizza.prix }} </div>
+
+<!-- ngModel est une directive d'Angular -->
+<input [(ngModel)]="pizza.nom">
+
+<input [value]="pizza.nom" (keyup)="pizza.nom = $event.target.value">
